@@ -10,11 +10,6 @@ import jakarta.persistence.Transient;
 
 import java.sql.Timestamp;
 
-/**
- * Factura generada automaticamente al despachar un pedido.
- * nombreCliente no es columna de esta tabla (viene de un JOIN via
- * Pedidos -> Clientes), por lo que va @Transient.
- */
 @Entity
 @Table(name = "Facturas")
 public class Factura {

@@ -13,10 +13,7 @@ import java.nio.charset.StandardCharsets;
  */
 public class Main {
     public static void main(String[] args) {
-        // Fuerza la salida a UTF-8 sin importar que la consola de Windows
-        // o la ventana Output de NetBeans esten en otra codificacion por
-        // defecto (Cp1252/CP850). Sin esto, tildes y enies pueden salir
-        // como simbolos raros aunque el codigo fuente este bien escrito.
+        
         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
         System.setErr(new PrintStream(System.err, true, StandardCharsets.UTF_8));
         try {

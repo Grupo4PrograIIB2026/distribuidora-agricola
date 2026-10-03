@@ -9,10 +9,7 @@ import jakarta.persistence.Table;
 
 import java.sql.Timestamp;
 
-/**
- * Un registro de la bitacora de acceso al sistema: quien intento entrar
- * (o salir), cuando, y que paso. Se guarda en la tabla BitacoraAcceso.
- */
+
 @Entity
 @Table(name = "BitacoraAcceso")
 public class BitacoraAcceso {

@@ -8,11 +8,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 
-/**
- * Un renglon del detalle de un pedido. 'subtotal' es una columna
- * CALCULADA por SQL Server (cantidad * precioUnitario PERSISTED) y
- * no se mapea aqui: se sigue calculando en Java con getSubtotal().
- */
 @Entity
 @Table(name = "DetallePedido")
 public class DetallePedido {

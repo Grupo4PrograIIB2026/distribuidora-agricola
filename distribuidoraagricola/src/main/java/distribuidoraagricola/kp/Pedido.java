@@ -12,13 +12,6 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Representa un pedido realizado por un cliente, junto con su detalle
- * y su estado dentro del flujo del negocio. idCliente se guarda como
- * columna simple (no @ManyToOne). nombreCliente y el detalle no son
- * columnas de esta tabla, por lo que van @Transient y los llena el
- * DAO/servicio.
- */
 @Entity
 @Table(name = "Pedidos")
 public class Pedido {

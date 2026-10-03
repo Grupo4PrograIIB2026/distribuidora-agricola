@@ -7,10 +7,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-/**
- * Representa un producto agricola. existencia se actualiza
- * automaticamente con las compras y los despachos de pedidos.
- */
 @Entity
 @Table(name = "ProductosAgricolas")
 public class ProductoAgricola {

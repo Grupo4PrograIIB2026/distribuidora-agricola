@@ -12,12 +12,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Representa una compra de productos a un proveedor. idProveedor se
- * guarda como columna simple (no @ManyToOne). nombreProveedor y el
- * detalle no son columnas de esta tabla, van @Transient y los llena
- * el DAO/servicio.
- */
+
 @Entity
 @Table(name = "Compras")
 public class Compra {

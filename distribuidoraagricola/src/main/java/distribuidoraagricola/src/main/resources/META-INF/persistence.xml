@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
+             version="3.2">
+
+    <persistence-unit name="distribuidoraAgricolaPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>distribuidoraagricola.modelo.Rol</class>
+        <class>distribuidoraagricola.modelo.Usuario</class>
+        <class>distribuidoraagricola.modelo.Cliente</class>
+        <class>distribuidoraagricola.modelo.Proveedor</class>
+        <class>distribuidoraagricola.modelo.ProductoAgricola</class>
+        <class>distribuidoraagricola.modelo.Compra</class>
+        <class>distribuidoraagricola.modelo.DetalleCompra</class>
+        <class>distribuidoraagricola.modelo.Pedido</class>
+        <class>distribuidoraagricola.modelo.DetallePedido</class>
+        <class>distribuidoraagricola.modelo.Factura</class>
+        <class>distribuidoraagricola.modelo.BitacoraMovimiento</class>
+
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+        <properties>
+            <!-- Mismos datos que ya tenias en Conexion.java. Si tu SQL
+                 Server esta en otra maquina, puerto o usa otra instancia,
+                 edita jakarta.persistence.jdbc.url. -->
+            <property name="jakarta.persistence.jdbc.driver"
+                      value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:sqlserver://localhost:1433;databaseName=DistribuidoraAgricola;encrypt=true;trustServerCertificate=true;"/>
+            <property name="jakarta.persistence.jdbc.user" value="sa"/>
+            <property name="jakarta.persistence.jdbc.password" value="2021310"/>
+
+            <!-- Las tablas ya existen (las crea sql/DistribuidoraAgricola.sql).
+                 "none" le dice a Hibernate que NO intente crear, validar ni
+                 modificar el esquema: solo usa las tablas tal como estan. -->
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+
+            <!-- Apagado: si alguna vez necesitas ver el SQL real que genera
+                 Hibernate para depurar algo, pon esto en "true" de nuevo. -->
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>
